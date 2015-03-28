@@ -100,6 +100,10 @@ PRODUCT_PACKAGES += \
     NfcNci \
     Tag
 
+PRODUCT_PACKAGES += \
+    librmnetctl \
+    rmnetcli
+
 # Camera
 PRODUCT_PACKAGES += \
     camera.clark \
