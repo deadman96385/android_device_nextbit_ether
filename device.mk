@@ -111,7 +111,8 @@ PRODUCT_PACKAGES += \
 
 # Motorola
 PRODUCT_PACKAGES += \
-    libmoto
+    libmoto \
+    libboringssl-compat
 
 # for off charging mode
 PRODUCT_PACKAGES += \
