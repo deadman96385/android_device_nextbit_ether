@@ -265,3 +265,7 @@
 
 # FB Quickdraw
 /dev/fb_quickdraw         0660   system     graphics
+
+# CDMA radio interface MUX
+/dev/ts0710mux*           0640   radio      radio
+/dev/ppp                  0660   radio      vpn
