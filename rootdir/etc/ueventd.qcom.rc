@@ -269,3 +269,13 @@
 # CDMA radio interface MUX
 /dev/ts0710mux*           0640   radio      radio
 /dev/ppp                  0660   radio      vpn
+
+# Video permissions
+/sys/devices/virtual/graphics/fb1/avi_itc             0664 system graphics
+/sys/devices/virtual/graphics/fb1/avi_cn0_1           0664 system graphics
+/sys/devices/virtual/graphics/fb1/hpd                 0664 system graphics
+/sys/devices/virtual/graphics/fb1/video_mode          0664 system graphics
+/sys/devices/virtual/graphics/fb1/vendor_name         0664 system graphics
+/sys/devices/virtual/graphics/fb1/product_description 0664 system graphics
+/sys/devices/virtual/graphics/fb1/hdcp/tp             0664 system graphics
+/sys/devices/virtual/graphics/fb2/ad                  0664 system graphics
