@@ -279,3 +279,4 @@
 /sys/devices/virtual/graphics/fb1/product_description 0664 system graphics
 /sys/devices/virtual/graphics/fb1/hdcp/tp             0664 system graphics
 /sys/devices/virtual/graphics/fb2/ad                  0664 system graphics
+/sys/devices/virtual/graphics/fb2/s3d_mode            0664 system graphics
