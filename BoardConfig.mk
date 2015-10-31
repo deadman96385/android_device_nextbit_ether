@@ -180,7 +180,7 @@ BOARD_SEPOLICY_UNION += \
     vold.te
 
 # Time services
-BOARD_USES_QC_TIME_SERVICES := true
+# BOARD_USES_QC_TIME_SERVICES := true
 
 # TWRP definitions
 DEVICE_RESOLUTION := 1440x2560
