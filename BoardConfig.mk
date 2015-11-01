@@ -160,15 +160,14 @@ BOARD_SEPOLICY_DIRS += \
     $(DEVICE_PATH)/sepolicy
 
 BOARD_SEPOLICY_UNION += \
+    adspd.te \
     atfwd.te \
     atvc.te \
     atvc_core.te\
-    file.te \
-    device.te \
-    adspd.te \
     batt_health.te \
     bluetooth.te \
-    wcnss_filter.te \
+    device.te \
+    file.te \
     file_contexts \
     healthd.te \
     init.te \
@@ -179,7 +178,9 @@ BOARD_SEPOLICY_UNION += \
     rmt_storage.te \
     sysinit.te \
     system_server.te \
-    vold.te
+    ueventd.te \
+    vold.te \
+    wcnss_filter.te
 
 # Time services
 # BOARD_USES_QC_TIME_SERVICES := true
