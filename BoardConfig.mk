@@ -173,6 +173,7 @@ BOARD_SEPOLICY_UNION += \
     init.te \
     init_shell.te \
     mm-qcamerad.te \
+    motosh.te \
     qmuxd.te \
     rild.te \
     rmt_storage.te \
