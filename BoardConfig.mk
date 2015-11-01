@@ -161,6 +161,8 @@ BOARD_SEPOLICY_DIRS += \
 
 BOARD_SEPOLICY_UNION += \
     atfwd.te \
+    atvc.te \
+    atvc_core.te\
     file.te \
     device.te \
     adspd.te \
