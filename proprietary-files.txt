@@ -511,6 +511,7 @@ lib64/hw/sensorhub.msm8992.so
 bin/time_daemon
 vendor/lib/libTimeService.so
 
+-vendor/lib/libtime_geoff.so
 vendor/lib/hw/flp.default.so
 vendor/lib/hw/activity_recognition.msm8992.so
 vendor/lib/egl/libQTapGLES.so
