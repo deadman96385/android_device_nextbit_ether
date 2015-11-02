@@ -172,9 +172,12 @@ BOARD_SEPOLICY_UNION += \
     healthd.te \
     init.te \
     init_shell.te \
+    mmi-boot-sh.te \
     mm-qcamerad.te \
     motosh.te \
     qmuxd.te \
+    property.te \
+    property_contexts \
     rild.te \
     rmt_storage.te \
     sysinit.te \
