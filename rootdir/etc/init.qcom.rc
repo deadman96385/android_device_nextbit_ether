@@ -45,7 +45,7 @@ on init
     symlink /sdcard /storage/sdcard0
 
     # Symbols required for motorola blobs
-    export LD_PRELOAD "/system/lib/libmoto.so /system/lib/libboringssl-compat.so"
+    export LD_PRELOAD "libmoto.so:libboringssl-compat.so"
 
 on fs
     mount_all fstab.qcom
@@ -626,14 +626,6 @@ service per_proxy /system/bin/pm-proxy
     user system
     group system net_raw
     disabled
-
-service thermal-engine /system/bin/thermal-engine
-    class main
-    user root
-    socket thermal-send-client stream 0666 system system
-    socket thermal-recv-client stream 0660 system system
-    socket thermal-recv-passive-client stream 0666 system system
-    group root
 
 service time_daemon /system/bin/time_daemon
     class late_start
