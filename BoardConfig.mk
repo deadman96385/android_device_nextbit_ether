@@ -186,9 +186,6 @@ BOARD_SEPOLICY_UNION += \
     vold.te \
     wcnss_filter.te
 
-# Time services
-# BOARD_USES_QC_TIME_SERVICES := true
-
 # TWRP definitions
 DEVICE_RESOLUTION := 1440x2560
 TW_BOARD_CUSTOM_GRAPHICS := ../../../$(DEVICE_PATH)/recovery/graphics.c
