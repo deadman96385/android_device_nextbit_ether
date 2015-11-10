@@ -82,6 +82,16 @@ on boot
     chmod 0664 /sys/class/leds/lcd-backlight/brightness
     chmod 0664 /sys/class/leds/charging/brightness
 
+    # Graphics permissions
+    chown system graphics /sys/class/graphics/fb1/hpd
+    chown system graphics /sys/class/graphics/fb1/vendor_name
+    chown system graphics /sys/class/graphics/fb1/product_description
+    chown system graphics /sys/class/graphics/fb1/s3d_mode
+    chmod 0664 /sys/class/graphics/fb1/hpd
+    chmod 0664 /sys/class/graphics/fb1/vendor_name
+    chmod 0664 /sys/class/graphics/fb1/product_description
+    chmod 0664 /sys/class/graphics/fb1/s3d_mode
+
     # Change the ownership of display TE files for tcmds
     chown root mot_tcmd /sys/class/graphics/fb0/te_enable
     chown root mot_tcmd /sys/class/graphics/fb0/frame_counter
