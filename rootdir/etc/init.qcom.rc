@@ -73,6 +73,8 @@ on early-boot
     # Allow subsystem (modem etc) debugging
     write /sys/kernel/boot_adsp/boot 1
 
+    exec /system/bin/sh /init.mmi.early_boot.sh
+
 on boot
     chown system system /sys/class/backlight/lcd-backlight:0/brightness
     chown system system /sys/class/backlight/lcd-backlight:0/max_brightness
@@ -791,11 +793,6 @@ service mmi-block-perm /system/bin/sh /init.mmi.block_perm.sh
 
 service mmi-boot-sh /system/bin/sh /init.mmi.boot.sh
     class core
-    user root
-    oneshot
-
-service mmi-early_boot-sh /system/bin/sh /init.mmi.early_boot.sh
-    class late_start
     user root
     oneshot
 
