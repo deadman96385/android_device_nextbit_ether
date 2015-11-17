@@ -174,6 +174,7 @@ BOARD_SEPOLICY_UNION += \
     healthd.te \
     init.te \
     init_shell.te \
+    mediaserver.te \
     mmi-boot-sh.te \
     mm-qcamerad.te \
     motosh.te \
@@ -185,6 +186,7 @@ BOARD_SEPOLICY_UNION += \
     sysinit.te \
     system_server.te \
     ueventd.te \
+    usb_uicc_daemon.te\
     vold.te \
     wcnss_filter.te
 
