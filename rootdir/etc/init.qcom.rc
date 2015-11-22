@@ -58,6 +58,9 @@ on init
     symlink /storage/emulated/legacy /mnt/sdcard
     symlink /storage/emulated/legacy /storage/sdcard0
 
+    # Symbols required for motorola blobs
+    export LD_PRELOAD /system/lib/libmoto.so
+
 on fs
     mount_all fstab.qcom
     swapon_all fstab.qcom
