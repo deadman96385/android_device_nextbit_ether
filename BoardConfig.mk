@@ -161,35 +161,6 @@ include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += \
     $(DEVICE_PATH)/sepolicy
 
-BOARD_SEPOLICY_UNION += \
-    adspd.te \
-    atfwd.te \
-    atvc.te \
-    atvc_core.te\
-    batt_health.te \
-    bluetooth.te \
-    device.te \
-    file.te \
-    file_contexts \
-    healthd.te \
-    init.te \
-    init_shell.te \
-    mediaserver.te \
-    mmi-boot-sh.te \
-    mm-qcamerad.te \
-    motosh.te \
-    qmuxd.te \
-    property.te \
-    property_contexts \
-    rild.te \
-    rmt_storage.te \
-    sysinit.te \
-    system_server.te \
-    ueventd.te \
-    usb_uicc_daemon.te\
-    vold.te \
-    wcnss_filter.te
-
 # Vendor Init
 TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_clark
