@@ -1,0 +1,22 @@
+[
+  {
+    "repository": "CyanogenMod/android_device_qcom_common",
+    "target_path": "device/qcom/common"
+  },
+  {
+    "repository": "CyanogenMod/android_external_stlport",
+    "target_path": "external/stlport"
+  },
+  {
+    "repository": "CyanogenMod/android_external_sony_boringssl-compat",
+    "target_path": "external/sony/boringssl-compat"
+  },
+  {
+    "repository": "Neph81/android_kernel_motorola_msm8992",
+    "target_path": "kernel/motorola/msm8992"
+  },
+  {
+    "repository": "Neph81/proprietary_vendor_motorola",
+    "target_path": "vendor/motorola"
+  }
+]
