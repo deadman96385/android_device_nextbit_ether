@@ -113,10 +113,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libmoto 
 
-# Stlport
-PRODUCT_PACKAGES += \
-    libstlport
-
 # for off charging mode
 PRODUCT_PACKAGES += \
     charger_res_images
