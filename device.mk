@@ -111,8 +111,7 @@ PRODUCT_PACKAGES += \
 
 # Motorola
 PRODUCT_PACKAGES += \
-    libmoto \
-    libboringssl-compat
+    libmoto 
 
 # Stlport
 PRODUCT_PACKAGES += \
