@@ -9,7 +9,7 @@ on charger
     # setprop sys.perf.profile 0
     start charge_only_mode
     start batt_health
-    start thermal-com
+    start thermanager
     class_stop main
     class_stop late_start
 
@@ -707,9 +707,8 @@ on property:persist.sys.ssr.restart_level=*
     start ssr_setup
 
 service batt_health /system/bin/batt_health
-    class late_start
-    user mot_pwric
-    group mot_pwric cache net_admin log
+    class main
+    group mot_pwric
     disabled
 
 service charge_only_mode /system/bin/charge_only_mode
@@ -780,10 +779,11 @@ service perfd /system/bin/perfd
     user root
     disabled
 
-service thermal-com /system/bin/thermal-engine --minimode
-    class main
+# OSS thermal management
+service thermanager /system/bin/thermanager /system/etc/thermanager.xml
+    class late_start
     user root
-    disabled
+    group root
 
 # CM Performance Profiles
 # Powersave
