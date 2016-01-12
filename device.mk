@@ -128,13 +128,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     pp_calib_data_mipi_mot_cmd_inx_QHD_0_570_v0.xml
 
-# Rich Communications Service is disabled in 5.1
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.rcs.supported=0
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.hwc.mdpcomp.enable=true
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/twrp.fstab:recovery/root/etc/twrp.fstab
 
@@ -188,13 +181,6 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/acdbdata/Bluetooth_cal.acdb:system/etc/acdbdata/Bluetooth_cal.acdb \
-    $(LOCAL_PATH)/audio/acdbdata/General_cal.acdb:system/etc/acdbdata/General_cal.acdb \
-    $(LOCAL_PATH)/audio/acdbdata/Global_cal.acdb:system/etc/acdbdata/Global_cal.acdb \
-    $(LOCAL_PATH)/audio/acdbdata/Handset_cal.acdb:system/etc/acdbdata/Handset_cal.acdb \
-    $(LOCAL_PATH)/audio/acdbdata/Hdmi_cal.acdb:system/etc/acdbdata/Hdmi_cal.acdb \
-    $(LOCAL_PATH)/audio/acdbdata/Headset_cal.acdb:system/etc/acdbdata/Headset_cal.acdb \
-    $(LOCAL_PATH)/audio/acdbdata/Speaker_cal.acdb:system/etc/acdbdata/Speaker_cal.acdb \
     $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
     $(LOCAL_PATH)/audio/audio_output_policy.conf:system/vendor/etc/audio_output_policy.conf \
     $(LOCAL_PATH)/audio/listen_platform_info.xml:system/etc/listen_platform_info.xml \
