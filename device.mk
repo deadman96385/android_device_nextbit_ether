@@ -26,7 +26,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config \
     $(LOCAL_PATH)/configs/msm_irqbalance.conf:system/etc/msm_irqbalance.conf \
     $(LOCAL_PATH)/overlay/frameworks/base/data/etc/platform.xml:system/etc/permissions/platform.xml \
-    $(LOCAL_PATH)/configs/init.qcom.ril.sh:system/etc/init.qcom.ril.sh
+    $(LOCAL_PATH)/configs/msm_irqbalance.conf:system/etc/msm_irqbalance.conf
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/qcril.db:system/etc/motorola/qcril.db
@@ -143,6 +143,7 @@ PRODUCT_PACKAGES += \
     init.qcom.power.rc \
     init.mmi.block_perm.sh \
     init.qcom.class_core.sh \
+    init.qcom.ril.sh \
     init.qcom.sh \
     ueventd.qcom.rc
 
