@@ -19,3 +19,6 @@ allow adspd adspd_socket:sock_file { read write };
 
 # TODO: Just use generic sysfs for now
 allow adspd sysfs:file write;
+
+allow adspd sysfs_adspd:dir search;
+allow adspd sysfs_adspd:file rw_file_perms;

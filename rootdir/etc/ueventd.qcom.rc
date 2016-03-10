@@ -270,3 +270,7 @@
 # CDMA radio interface MUX
 /dev/ts0710mux*           0640   radio      radio
 /dev/ppp                  0660   radio      vpn
+
+/dev/block/platform/f9824900.sdhci/by-name/cid   0660 root mot_dbvc
+/dev/block/platform/f9824900.sdhci/by-name/clogo 0660 root system
+/dev/block/platform/f9824900.sdhci/by-name/frp   0600 system system

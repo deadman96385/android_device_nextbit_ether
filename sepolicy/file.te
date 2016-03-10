@@ -14,3 +14,5 @@ type batt_health_sysfs, sysfs_type, fs_type;
 
 # PDS files
 type pds_file, file_type;
+
+type sysfs_adspd, sysfs_type, fs_type;

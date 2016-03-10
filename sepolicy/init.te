@@ -4,6 +4,22 @@ allow init input_device:chr_file ioctl;
 allow init mpctl_data_file:file append;
 allow init property_socket:sock_file write;
 allow init sensors_device:chr_file { write ioctl };
+allow init self:socket { read write create ioctl };
 allow init socket_device:sock_file { create setattr };
 allow init system_data_file:file { rename append };
 allow init kernel:system syslog_read;
+allow init adspd_data_file:sock_file create;
+allow init block_device:blk_file setattr;
+allow init fsg_file:filesystem { relabelfrom relabelto mount };
+allow init self:socket read;
+allow init atvc:file x_file_perms;
+allow init shell_data_file:fifo_file getattr;
+
+# Sometimes there are leftovers from recovery, allow init to fix those
+allow init init:file relabelfrom;
+allow init fuse:dir { relabelfrom read };
+allow init fuse:file { relabelfrom getattr };
+
+# Additional permissions
+allow init qmuxd:unix_stream_socket connectto;
+allow init qmuxd_socket:sock_file write;

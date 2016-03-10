@@ -1,1 +1,2 @@
 allow ueventd radio_data_file:chr_file { create setattr };
+allow ueventd sysfs_adspd:file w_file_perms;
