@@ -23,7 +23,7 @@ allow init fuse:file { relabelfrom getattr };
 # Additional permissions
 allow init qmuxd:unix_stream_socket connectto;
 allow init qmuxd_socket:sock_file write;
-allow init graphics_device:chr_file write;
+allow init graphics_device:chr_file { write ioctl };
 allow init hwrev_data_file:file append;
 allow init sysfs_lowmemorykiller:file getattr;
 allow init sysfs_light:file setattr;
