@@ -17,17 +17,13 @@
 
 # batt_health
 /system/bin/batt_health                 	u:object_r:batt_health_exec:s0
-/data/power_supply_logger(/.*)?         	u:object_r:batt_health_data_file:s0
 /dev/motosh                             	u:object_r:sensors_device:s0
 /dev/motosh_as                          	u:object_r:sensors_device:s0
 /dev/motosh_ms                          	u:object_r:sensors_device:s0
 
 /system/bin/charge_only_mode            	u:object_r:charge_only_mode_exec:s0
-/system/bin/batt_health                 	u:object_r:batt_health_exec:s0
 
 /dev/ttyHS0                            	 	u:object_r:hci_attach_dev:s0
-
-/sys/vibrator/pwmvalue                  	u:object_r:vibeamp_sysfs:s0
 
 # ril
 /dev/mot_hob_ram                        	u:object_r:radio_data_file:s0
