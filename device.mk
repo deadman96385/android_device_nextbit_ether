@@ -28,10 +28,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/overlay/frameworks/base/data/etc/platform.xml:system/etc/permissions/platform.xml \
     $(LOCAL_PATH)/configs/msm_irqbalance.conf:system/etc/msm_irqbalance.conf
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/qcril.db:system/etc/motorola/qcril.db
-
-# Input device files for clark
+# Input device files for ether
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
 

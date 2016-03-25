@@ -1,6 +1,7 @@
 ## NEEDED?
 vendor/lib/libwifiscanner.so
 vendor/lib/drm/libdrmwvmplugin.so
+vendor/qcril.db
 
 ## WORKING
 # ADSP /ADSP-RPC / Vision
