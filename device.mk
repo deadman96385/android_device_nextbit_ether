@@ -78,11 +78,6 @@ PRODUCT_PACKAGES += \
     timekeep \
     TimeKeep
 
-# Live Wallpapers
-PRODUCT_PACKAGES += \
-    LiveWallpapersPicker \
-    librs_jni
-
 # Filesystem management tools
 PRODUCT_PACKAGES += \
     fsck.exfat \
@@ -93,7 +88,6 @@ PRODUCT_PACKAGES += \
 # Power
 PRODUCT_PACKAGES += \
     power.msm8992
-
 
 # NFC packages
 PRODUCT_PACKAGES += \
