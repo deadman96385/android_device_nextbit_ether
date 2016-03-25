@@ -113,9 +113,6 @@ PRODUCT_PACKAGES += \
     charger_res_images
 
 PRODUCT_PACKAGES += \
-    pp_calib_data_mipi_mot_cmd_inx_QHD_0_570_v0.xml
-
-PRODUCT_PACKAGES += \
     fstab.qcom \
     init.mmi.usb.rc \
     init.qcom.rc \
