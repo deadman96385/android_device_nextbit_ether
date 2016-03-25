@@ -25,27 +25,8 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-/dev/null                 0666   root       root
-/dev/zero                 0666   root       root
-/dev/full                 0666   root       root
-/dev/ptmx                 0666   root       root
-/dev/tty                  0666   root       root
-/dev/random               0666   root       root
-/dev/urandom              0666   root       root
-
-/dev/ashmem               0666   root       root
-/dev/binder               0666   root       root
-/dev/tspdrv               0666   root       root
-/dev/ttyHSL0             0660   radio      system
-# logger should be world writable (for logging) but not readable
-/dev/log/*                0666   root       log
-/dev/pmsg0                0222   root       log
-
 # the DIAG device node is not world writable/readable.
 /dev/diag                 0660   system     qcom_diag
-/dev/ttydiag0             0660   system     qcom_diag
-/dev/ttydiag1             0660   system     qcom_diag
-/dev/ttydiag2             0660   system     qcom_diag
 
 /dev/genlock              0666   system     system
 /dev/kgsl                 0666   system     system
@@ -53,7 +34,7 @@
 /dev/kgsl-2d0             0666   root       root
 /dev/kgsl-2d1             0666   root       root
 /dev/ion                  0664   system     system
-/dev/rtc0                 0660   system     system
+/dev/rtc0                 0600   system     system
 /dev/smd0                 0660   system     system
 /dev/smd4                 0660   system     system
 /dev/smd_cxm_qmi          0640   radio      radio
@@ -61,13 +42,11 @@
 /dev/smd6                 0660   system     system
 /dev/smd7                 0660   bluetooth  bluetooth
 /dev/ccid_bridge          0660   system     system
-/dev/ipa                  0660   net_admin  net_admin
-/dev/wwan_ioctl           0660   net_admin  net_admin
+/dev/ipa                  0660   system     net_admin
+/dev/wwan_ioctl           0660   system     net_admin
 /dev/ipaNatTable          0660   net_admin  net_admin
 /dev/rmnet_ctrl           0660   usb        usb
 /dev/dpl_ctrl             0660   usb        usb
-
-/dev/block/bootdevice/by-name/frp 0600 system system
 
 #permissions for CSVT
 /dev/smd11                0660   radio      radio
@@ -129,7 +108,6 @@
 /dev/v4l-subdev*          0660   system     camera
 /dev/qseecom              0660   system     drmrpc
 /dev/seemplog             0660   system     system
-/dev/sec                  0660   system     drmrpc
 /dev/pft                  0660   system     drmrpc
 /dev/gemini0              0660   system     camera
 /dev/jpeg0                0660   system     camera
@@ -186,6 +164,7 @@
 /dev/ttyGS0               0660   system     system
 /dev/i2c-5                0660   media       media
 /dev/voice_svc            0660   system     audio
+/dev/avtimer              0660   system     audio
 
 # DVB devices
 /dev/dvb/adapter0/demux*  0440   media       media
@@ -226,10 +205,11 @@
 # wlan
 /dev/wcnss_wlan           0660   system     system
 /dev/wcnss_ctrl           0660   system     system
+/sys/devices/pci0000:00/0000:00:00.0/0000:01:00.0/net/wlan0/queues/rx-* rps_cpus 0660 system system
+
 #nfc permissions
 /dev/nfc-nci              0660    nfc         nfc
 /dev/assd                 0660    nfc         nfc
-/dev/bcm2079x-i2c         0660    nfc         nfc
 
 # UIO devices
 /dev/uio0                 0660   system     system
@@ -239,42 +219,9 @@
 # SSR devices
 /dev/subsys_*         0640   system     system
 
-# Sensors
-/persist/sensors          0775   system     root
-/persist/sensors/sensors_settings   0664   system   root
-
-# Moto Sensorhub Sensors
-/dev/motosh               0660   system     compass
-/dev/motosh_as            0660   compass    compass
-/dev/motosh_ms            0660   compass    compass
-/sys/devices/virtual/motosh/motosh_as* timestamp_time_ns    0440 compass compass
-/sys/devices/virtual/motosh/motosh_as* rv_6axis_update_rate 0660 compass compass
-/sys/devices/virtual/motosh/motosh_as* rv_9axis_update_rate 0660 compass compass
-/sys/devices/virtual/motosh/motosh_as* gravity_update_rate  0660 compass compass
-/sys/devices/virtual/motosh/motosh_as* linear_accel_update_rate 0660 compass compass
-
 # Ultrasound device
 /dev/usf1                 0660   system     system
 
-# Subsystem Restart Ramdump
-/dev/ramdump*             0660   radio      radio
+# Ramdump devices
+/dev/ramdump*             0640   system     system
 
-# HOB
-/dev/mot_hob_ram          0660   radio      radio
-
-# I2C
-/dev/i2c-*                0660   root       system
-
-# haptic
-/dev/drv2605              0660   system     system
-
-# FB Quickdraw
-/dev/fb_quickdraw         0660   system     graphics
-
-# CDMA radio interface MUX
-/dev/ts0710mux*           0640   radio      radio
-/dev/ppp                  0660   radio      vpn
-
-/dev/block/platform/f9824900.sdhci/by-name/cid   0660 root mot_dbvc
-/dev/block/platform/f9824900.sdhci/by-name/clogo 0660 root system
-/dev/block/platform/f9824900.sdhci/by-name/frp   0600 system system
