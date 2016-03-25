@@ -134,7 +134,6 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     init.mmi.usb.rc \
     init.qcom.rc \
-    init.qcom.power.rc \
     ueventd.qcom.rc
 
 # Display
