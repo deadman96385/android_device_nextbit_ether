@@ -50,7 +50,7 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 # we do this little trick to fall back to the xxhdpi version
 # if the 560dpi doesn't exist.
 PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := 560dpi
+PRODUCT_AAPT_PREF_CONFIG := 480dpi
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
 PRODUCT_CHARACTERISTICS := default
