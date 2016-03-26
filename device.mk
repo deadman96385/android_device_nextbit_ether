@@ -30,7 +30,7 @@ PRODUCT_COPY_FILES += \
 
 # Input device files for ether
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
+    $(LOCAL_PATH)/configs/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermanager.xml:system/etc/thermanager.xml
