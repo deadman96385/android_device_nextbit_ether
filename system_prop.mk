@@ -1,5 +1,5 @@
 #
-# System Properties for Moto X Pure
+# System Properties for Nextbit Robin
 #
 
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -146,14 +146,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.bug2go.magickeys=24,26 \
     drm.service.enabled=true \
     mdc_initial_max_retry=10
-
-# For Playstore
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.com.google.clientidbase=android-motorola \
-    ro.com.google.clientidbase.ms=android-motorola \
-    ro.com.google.clientidbase.am=android-motorola \
-    ro.com.google.clientidbase.gmm=android-motorola \
-    ro.com.google.clientidbase.yt=android-motorola
 
 # Tethering
 PRODUCT_PROPERTY_OVERRIDES += \

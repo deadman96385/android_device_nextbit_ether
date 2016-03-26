@@ -14,20 +14,19 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/motorola/clark
+DEVICE_PATH := device/nextbit
 
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_SMP := true
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
-TARGET_CPU_VARIANT := generic
-BOARD_VENDOR := motorola-qcom
+TARGET_CPU_VARIANT := cortex-a53
 
 TARGET_2ND_ARCH := arm
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_ARCH_VARIANT := armv7-a-neon
-TARGET_2ND_CPU_VARIANT := cortex-a53
+TARGET_2ND_CPU_VARIANT := cortex-a53.a57
 
 TARGET_CPU_CORTEX_A53 := true
 
@@ -49,23 +48,21 @@ TARGET_NO_RPC := true
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
 BOARD_KERNEL_SEPARATED_DT := true
-BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/mkbootimg.mk
-TARGET_KERNEL_SOURCE := kernel/motorola/msm8992
+TARGET_KERNEL_SOURCE := kernel/nextbit/msm8992
 TARGET_KERNEL_CONFIG := clark_defconfig
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_ARCH := arm64
 TARGET_USES_UNCOMPRESSED_KERNEL := true
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/kernel
-TARGET_KERNEL_HAVE_EXFAT := true
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 earlyprintk=msm_hsl_uart,0xf991e000 utags.blkdev=/dev/block/bootdevice/by-name/utags utags.backup=/dev/block/bootdevice/by-name/utagsBackup
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 boot_cpus=0-3
 #BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset BOARD_RAMDISK_OFFSET --tags_offset BOARD_KERNEL_TAGS_OFFSET
 
 TARGET_NO_RADIOIMAGE := true
 TARGET_BOARD_PLATFORM := msm8992
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno418
-TARGET_BOOTLOADER_BOARD_NAME := clark
+TARGET_BOOTLOADER_BOARD_NAME := ether
 TARGET_USES_LOGD := true
 
 TARGET_USES_64_BIT_BINDER := true
@@ -142,21 +139,20 @@ NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 
 # Filesystems
 TARGET_USERIMAGES_USE_EXT4 := true
-TARGET_USERIMAGES_USE_F2FS := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 41943040
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 42024960
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 4294967296
-BOARD_CACHEIMAGE_PARTITION_SIZE := 805306368
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 41943040
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1073741824
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 2147483648
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Added to indicate that protobuf-c is supported in this build
 PROTOBUF_SUPPORTED := true
 
-#Camera
+# Camera
 USE_DEVICE_SPECIFIC_CAMERA := true
 
-#Enable peripheral manager
+# Enable peripheral manager
 TARGET_PER_MGR_ENABLED := true
 
 # Charger
