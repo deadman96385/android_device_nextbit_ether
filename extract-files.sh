@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #set -e
-export DEVICE=clark
-export VENDOR=motorola
+export DEVICE=ether
+export VENDOR=nextbit
 
 if [ $# -eq 0 ]; then
   SRC=adb

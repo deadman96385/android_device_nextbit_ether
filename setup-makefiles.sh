@@ -1,7 +1,7 @@
 #!/bin/bash
 
-DEVICE=clark
-VENDOR=motorola
+DEVICE=ether
+VENDOR=nextbit
 YEAR=$(date +%Y)
 
 OUTDIR=vendor/$VENDOR/$DEVICE
