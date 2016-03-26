@@ -1,13 +1,9 @@
 ## NEEDED?
-vendor/lib/libwifiscanner.so
-vendor/lib/drm/libdrmwvmplugin.so
+vendor/lib/hw/flp.default.so
 vendor/qcril.db
 
 ## WORKING
 # ADSP /ADSP-RPC / Vision
-bin/adspd
-bin/adsprpcd
-lib/libadspd.so
 vendor/lib/libadsprpc.so
 vendor/lib/libmdsprpc.so
 vendor/lib/libfastcvopt.so
@@ -26,17 +22,13 @@ vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so
 vendor/lib/rfsa/adsp/libpanorama_skel.so
 vendor/lib/rfsa/adsp/libscveTextReco_skel.so
 vendor/lib/rfsa/adsp/libobjectMattingApp_skel.so
-vendor/lib/rfsa/adsp/libmare_hexagon_skel.so
 
 # Audio
 bin/fm_qsoc_patches
 vendor/bin/audioflacapp
 lib/libaudioroute.so
 lib/hw/audio.primary.msm8992.so
-lib/hw/audio.motvr.default.so
-lib/libmotaudioutils.so
 lib/libqcomfm_jni.so
-lib/libunshorten.so
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
 vendor/lib/libacdbmapper.so
@@ -47,51 +39,11 @@ vendor/lib/libaudioalsa.so
 vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
-lib/soundfx/libmmieffectswrapper.so
-lib/soundfx/libspeakerbundle.so
-etc/acdbdata/General_cal.acdb
-etc/acdbdata/Bluetooth_cal.acdb
-etc/acdbdata/Global_cal.acdb
-etc/acdbdata/Headset_cal.acdb
-etc/acdbdata/Handset_cal.acdb
-etc/acdbdata/Hdmi_cal.acdb
-etc/acdbdata/Speaker_cal.acdb
-etc/firmware/florida-dsp2-aov-frontend.wmfw
-etc/firmware/florida-dsp3-aov-control.wmfw
 etc/aanc_tuning_mixer.txt
-
-# Audio firmware
-etc/firmware/left.tfa9890.music.config
-etc/firmware/left.tfa9890.music.eq
-etc/firmware/left.tfa9890.ringtone.config
-etc/firmware/left.tfa9890.ringtone.eq
-etc/firmware/left.tfa9890.speaker
-etc/firmware/left.tfa9890.voice.config
-etc/firmware/left.tfa9890.voice.eq
-etc/firmware/left.tfa9890_music_table.preset
-etc/firmware/left.tfa9890_n1b12.patch
-etc/firmware/left.tfa9890_n1c2.patch
-etc/firmware/left.tfa9890_ringtone_table.preset
-etc/firmware/left.tfa9890_voice_table.preset
-etc/firmware/right.tfa9890.music.config
-etc/firmware/right.tfa9890.music.eq
-etc/firmware/right.tfa9890.ringtone.config
-etc/firmware/right.tfa9890.ringtone.eq
-etc/firmware/right.tfa9890.speaker
-etc/firmware/right.tfa9890.voice.config
-etc/firmware/right.tfa9890.voice.eq
-etc/firmware/right.tfa9890_music_table.preset
-etc/firmware/right.tfa9890_n1b12.patch
-etc/firmware/right.tfa9890_n1c2.patch
-etc/firmware/right.tfa9890_ringtone_table.preset
-etc/firmware/right.tfa9890_voice_table.preset
-etc/firmware/vrgain.bin
 
 # Bluetooth
 bin/btnvtool
 bin/hci_qcomm_init
-bin/wcnss_filter
-etc/user_bhd_psy.conf
 etc/firmware/nvm_tlv.bin
 etc/firmware/nvm_tlv_1.3.bin
 etc/firmware/nvm_tlv_2.1.bin
@@ -105,55 +57,19 @@ etc/firmware/rampatch_tlv_3.2.tlv
 vendor/lib/libbtnv.so
 vendor/lib/libbt-vendor.so
 
-# Camera
-bin/mediaserver
-bin/mm-qcamera-daemon
+# Camera firmware
 etc/firmware/cpp_firmware_v1_1_1.fw
 etc/firmware/cpp_firmware_v1_1_6.fw
 etc/firmware/cpp_firmware_v1_2_0.fw
 etc/firmware/cpp_firmware_v1_4_0.fw
 etc/firmware/cpp_firmware_v1_6_0.fw
 etc/firmware/cpp_firmware_v1_8_0.fw
-etc/permissions/com.motorola.camera.xml
-etc/permissions/com.motorola.gallery.xml
-lib/hw/camera.msm8992.so
-lib/libmot_lux_standardization.so
-lib/libadvalgcore.so
-lib/libAisAdapter.so
-lib/libAlAisLib.so
-lib/libAlAisTune.so
-lib/libAlAisWrap.so
-lib/libcamerabgproc-jni.so
-lib/libcamerabgprocservice.so
-lib/libjscore.so
-lib/libjustshoot.so
-lib/libmmcamera_interface.so
-lib/libmmjpeg_interface.so
-lib/libbson.so
-lib/libmot_sensorlistener.so
-lib/libmot-qc-fd-offline.so
-lib/libmbs.so
-lib/libqomx_core.so
-vendor/lib/libmmipl.so
-vendor/lib/libmmjpeg.so
-vendor/lib/libmmqjpeg_codec.so
-vendor/lib/libmmqjpegdma.so
-vendor/lib/libmmQSM.so
-vendor/lib/liboemcamera.so
-vendor/lib/libqomx_jpegdec.so
-vendor/lib/libqomx_jpegenc_pipe.so
-vendor/lib/libqomx_jpegenc.so
-vendor/lib/libfastcvadsp_stub.so
-vendor/lib/libflash_pmic.so
-vendor/lib/libjpegdhw.so
-vendor/lib/libjpegdmahw.so
-vendor/lib/libjpegehw.so
-vendor/lib/libmotocalibration.so
-vendor/lib/libflash_sky81296.so
-vendor/lib/libSonyIMX230PdafLibrary.so
-vendor/lib/libactuator_mot_lc898212xd_camcorder.so
-vendor/lib/libactuator_mot_lc898212xd_camera.so
-vendor/lib/libactuator_mot_lc898212xd.so
+
+# Camera module
+vendor/lib/libactuator_lc898212xd_camcorder.so
+vendor/lib/libactuator_lc898212xd_camera.so
+vendor/lib/libactuator_lc898212xd.so
+vendor/lib/libactuator_lc898122.so
 vendor/lib/libmmcamera_ppbase_module.so
 vendor/lib/libmmcamera2_c2d_module.so
 vendor/lib/libmmcamera2_cpp_module.so
@@ -184,11 +100,6 @@ vendor/lib/libmmcamera_isp_rs_stats44.so
 vendor/lib/libmmcamera_isp_scaler_encoder44.so
 vendor/lib/libmmcamera_isp_scaler_viewfinder44.so
 vendor/lib/libmmcamera_isp_wb40.so
-vendor/lib/libmmcamera_mot_imx230.so
-vendor/lib/libmmcamera_omnivision_ov5693_eeprom.so
-vendor/lib/libmmcamera_ov5693.so
-vendor/lib/libmmcamera_sony_imx230_eeprom.so
-vendor/lib/libmmcamera_vstab_module.so
 vendor/lib/libmmcamera_isp_color_xform_encoder40.so
 vendor/lib/libmmcamera_isp_color_correct40.so
 vendor/lib/libmmcamera_isp_demux40.so
@@ -221,70 +132,49 @@ vendor/lib/libmmcamera_isp_gamma44.so
 vendor/lib/libmmcamera_tintless_bg_pca_algo.so
 vendor/lib/libmmcamera_imglib.so
 
-# Chromatix
-vendor/lib/libchromatix_mot_imx230_common.so
-vendor/lib/libchromatix_mot_imx230_common_ihdr.so
-vendor/lib/libchromatix_mot_imx230_cpp_hfr_120.so
-vendor/lib/libchromatix_mot_imx230_cpp_liveshot.so
-vendor/lib/libchromatix_mot_imx230_cpp_liveshot_video_4k.so
-vendor/lib/libchromatix_mot_imx230_cpp_liveshot_video_ihdr.so
-vendor/lib/libchromatix_mot_imx230_cpp_liveshot_video_ihdr_4k.so
-vendor/lib/libchromatix_mot_imx230_cpp_snapshot.so
-vendor/lib/libchromatix_mot_imx230_cpp_snapshot_night.so
-vendor/lib/libchromatix_mot_imx230_cpp_video.so
-vendor/lib/libchromatix_mot_imx230_cpp_video_4k.so
-vendor/lib/libchromatix_mot_imx230_cpp_video_ihdr.so
-vendor/lib/libchromatix_mot_imx230_cpp_video_ihdr_4k.so
-vendor/lib/libchromatix_mot_imx230_default_video.so
-vendor/lib/libchromatix_mot_imx230_hfr_120.so
-vendor/lib/libchromatix_mot_imx230_postproc.so
-vendor/lib/libchromatix_mot_imx230_snapshot.so
-vendor/lib/libchromatix_mot_imx230_snapshot_night.so
-vendor/lib/libchromatix_mot_imx230_video_4k.so
-vendor/lib/libchromatix_mot_imx230_video_ihdr.so
-vendor/lib/libchromatix_mot_imx230_video_ihdr_4k.so
-vendor/lib/libchromatix_ov5693_common.so
-vendor/lib/libchromatix_ov5693_cpp_hfr_120.so
-vendor/lib/libchromatix_ov5693_cpp_liveshot.so
-vendor/lib/libchromatix_ov5693_cpp_preview.so
-vendor/lib/libchromatix_ov5693_cpp_snapshot.so
-vendor/lib/libchromatix_ov5693_cpp_snapshot_night.so
-vendor/lib/libchromatix_ov5693_cpp_video.so
-vendor/lib/libchromatix_ov5693_hfr_120.so
-vendor/lib/libchromatix_ov5693_postproc.so
-vendor/lib/libchromatix_ov5693_snapshot.so
-vendor/lib/libchromatix_ov5693_snapshot_night.so
-vendor/lib/libchromatix_ov5693_video.so
+# Camera
+lib/hw/camera.msm8992.so
+lib/libmmcamera_interface.so
+lib/libmmjpeg_interface.so
+lib/libqomx_core.so
+vendor/lib/libmmipl.so
+vendor/lib/libmmjpeg.so
+vendor/lib/libmmqjpeg_codec.so
+vendor/lib/libmmqjpegdma.so
+vendor/lib/libmmQSM.so
+vendor/lib/liboemcamera.so
+vendor/lib/libqomx_jpegdec.so
+vendor/lib/libqomx_jpegenc_pipe.so
+vendor/lib/libqomx_jpegenc.so
+vendor/lib/libfastcvadsp_stub.so
+vendor/lib/libflash_pmic.so
+vendor/lib/libjpegdhw.so
+vendor/lib/libjpegdmahw.so
+vendor/lib/libjpegehw.so
+vendor/lib/libSonyIMX230PdafLibrary.so
+
+
+# Camera Chromatix
+vendor/lib/libchromatix_imx230_common.so
+vendor/lib/libchromatix_imx230_cpp_hfr_120.so
+vendor/lib/libchromatix_imx230_cpp_liveshot.so
+vendor/lib/libchromatix_imx230_cpp_snapshot.so
+vendor/lib/libchromatix_imx230_cpp_video.so
+vendor/lib/libchromatix_imx230_cpp_video_4k.so
+vendor/lib/libchromatix_imx230_default_video.so
+vendor/lib/libchromatix_imx230_hfr_120.so
+vendor/lib/libchromatix_imx230_postproc.so
+vendor/lib/libchromatix_imx230_snapshot.so
+vendor/lib/libchromatix_imx230_video_4k.so
 
 # CPU
-bin/msm_irqbalance
-bin/perfd
 vendor/lib/libqti-perfd-client.so
 vendor/lib/libthermalclient.so
 
-# DM/Sprint
--app/DMConfigUpdateLight/DMConfigUpdateLight.apk
--app/HiddenMenuLight/HiddenMenuLight.apk
-etc/permissions/com.android.omadm.service.xml
-etc/sysconfig/whitelist_com.android.omadm.service.xml
-lib/libdmengine.so
-lib/libdmjavaplugin.so
--priv-app/CQATest/CQATest.apk
--priv-app/ConnMO/ConnMO.apk
--priv-app/DCMO/DCMO.apk
--priv-app/DMService/DMService.apk
-lib/libdmengine.so:priv-app/DMService/lib/arm/libdmengine.so
-lib/libdmjavaplugin.so:priv-app/DMService/lib/arm/libdmjavaplugin.so
--priv-app/DiagMon/DiagMon.apk
--priv-app/LifetimeData/LifetimeData.apk
--priv-app/SprintDM/SprintDM.apk
-
 # DRM
 # TZBSP
-bin/qseecomd
 etc/permissions/com.google.widevine.software.drm.xml
 framework/com.google.widevine.software.drm.jar
-lib/hw/keystore.qcom.so
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
 vendor/lib/liboemcrypto.so
@@ -299,7 +189,6 @@ vendor/lib/libsecureuisvc_jni.so
 vendor/lib/libsecureui_svcsock.so
 vendor/lib/libsi.so
 vendor/lib/libssd.so
-vendor/lib/libSSEPKCS11.so
 vendor/lib/libtzdrmgenprov.so
 vendor/lib/libwvdrm_L1.so
 vendor/lib/libwvm.so
@@ -313,32 +202,7 @@ vendor/lib/libmm-disp-apis.so
 vendor/lib/libmm-qdcm.so
 vendor/lib/libsd_sdk_display.so
 
-# QMI
-bin/ATFWD-daemon
-bin/irsc_util
-bin/pm-proxy
-bin/pm-service
-bin/usb_uicc_client
-vendor/lib/libconfigdb.so
-vendor/lib/libsystem_health_mon.so
-vendor/lib/libdiag.so
-vendor/lib/libdsi_netctrl.so
-vendor/lib/libidl.so
-vendor/lib/libqdi.so
-vendor/lib/libqdp.so
-vendor/lib/libqmi_cci.so
-vendor/lib/libqmi_client_helper.so
-vendor/lib/libqmi_client_qmux.so
-vendor/lib/libqmi_common_so.so
-vendor/lib/libqmi_csi.so
-vendor/lib/libqmi_encdec.so
-vendor/lib/libqmiservices.so
-vendor/lib/libqmi.so
-vendor/lib/libsmemlog.so
-vendor/lib/libvoice-svc.so
-
 # GPS
-bin/loc_launcher
 etc/permissions/com.qualcomm.location.xml
 lib/libloc_api_v02.so
 lib/libloc_ds_api.so
@@ -351,7 +215,6 @@ vendor/lib/libgeofence.so
 vendor/lib/libizat_core.so
 vendor/lib/liblbs_core.so
 vendor/lib/liblocationservice.so
-vendor/lib/libquipc_ulp_adapter.so
 vendor/lib/libulp2.so
 etc/izat.conf
 
@@ -390,11 +253,6 @@ vendor/lib/egl/libq3dtools_esx.so
 vendor/lib/egl/libQTapGLES.so
 
 # Media
-etc/firmware/dxhdcp2.b00
-etc/firmware/dxhdcp2.b01
-etc/firmware/dxhdcp2.b02
-etc/firmware/dxhdcp2.b03
-etc/firmware/dxhdcp2.mdt
 etc/firmware/venus.b00
 etc/firmware/venus.b01
 etc/firmware/venus.b02
@@ -402,86 +260,51 @@ etc/firmware/venus.b03
 etc/firmware/venus.b04
 etc/firmware/venus.mbn
 etc/firmware/venus.mdt
-vendor/lib/libDxHdcp.so
 vendor/lib/libFlacSwDec.so
 vendor/lib/libI420colorconvert.so
 vendor/lib/libmm-hdcpmgr.so
 vendor/lib/libSHIMDivxDrm.so
 
-# Motorola
-bin/batt_health
-bin/charge_only_mode
-bin/dbvc_atvc_property_set
-bin/hardware_revisions.sh
-
-# NFC
-etc/firmware/BCM20795A2_001.003.025.0005.0048_Generic_I2C_NCD_Signed_configdata.ncd
-
 # Qualcomm framework
 vendor/lib/libdsutils.so
 vendor/lib/libqcci_legacy.so
+vendor/lib/libconfigdb.so
+vendor/lib/libsystem_health_mon.so
+vendor/lib/libdiag.so
+vendor/lib/libdsi_netctrl.so
+vendor/lib/libidl.so
+vendor/lib/libqdi.so
+vendor/lib/libqdp.so
+vendor/lib/libqmi_cci.so
+vendor/lib/libqmi_client_helper.so
+vendor/lib/libqmi_client_qmux.so
+vendor/lib/libqmi_common_so.so
+vendor/lib/libqmi_csi.so
+vendor/lib/libqmi_encdec.so
+vendor/lib/libqmiservices.so
+vendor/lib/libqmi.so
+vendor/lib/libsmemlog.so
+vendor/lib/libvoice-svc.so
 
 # CNE
+-framework/cneapiclient.jar
+-framework/com.quicinc.cne.jar
 -priv-app/CNEService/CNEService.apk
-bin/cnd
-etc/cne/andsfCne.xml
-etc/cne/SwimConfig.xml
-etc/permissions/cneapiclient.xml
-etc/permissions/com.motorola.motosignature.xml
-framework/com.motorola.motosignature.jar
+vendor/lib/libcne.so
 vendor/lib/libcneapiclient.so
 vendor/lib/libcneconn.so
 vendor/lib/libcneqmiutils.so
-vendor/lib/libcne.so
 vendor/lib/libNimsWrap.so
 vendor/lib/libvendorconn.so
 vendor/lib/libwqe.so
+vendor/lib/libxml.so
 
 # Radio
--app/ims/ims.apk
--app/MotoSignatureApp/MotoSignatureApp.apk
--priv-app/atfwd/atfwd.apk
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
-bin/diag_klog
-bin/diag_mdlog
-bin/diag_mdlog-getlogs
-bin/diag_mdlog-wrap
-bin/diag_qshrink4_daemon
-bin/port-bridge
-bin/test_diag
-bin/netmgrd
-bin/qmi_motext_hook
-bin/qmuxd
-bin/rfs_access
-bin/rmt_storage
-vendor/bin/qti
-etc/diag_mdlog/Bluetooth_V1.cfg
-etc/diag_mdlog/Bluetooth_audio_V1.cfg
-etc/diag_mdlog/Connection_Issues_V8_wifi.cfg
-etc/diag_mdlog/Connection_Issues_V9.cfg
-etc/diag_mdlog/Connection_Issues_V9_wifi.cfg
-etc/diag_mdlog/FIT_V18_1.cfg
-etc/diag_mdlog/FIT_V18_2_volte_full_ip.cfg
-etc/diag_mdlog/FIT_V18_3_audio.cfg
-etc/diag_mdlog/GNSS_SUPL_V5.cfg
-etc/diag_mdlog/GNSS_V4.cfg
-etc/diag_mdlog/Vzw_Connection_Issues_V1.cfg
-etc/diag_mdlog/WLAN_V1.cfg
-etc/diag_mdlog/default.cfg
-etc/diag_mdlog/default.opts
-etc/permissions/com.verizon.ims.xml
-etc/permissions/ims.xml
-etc/permissions/org.simalliance.openmobileapi.xml
 etc/permissions/qcnvitems.xml
 etc/permissions/qcrilhook.xml
 framework/qcnvitems.jar
 framework/qcrilhook.jar
-framework/com.verizon.ims.jar
-framework/org.simalliance.openmobileapi.jar
-lib/libmdmcutback.so
-lib/libmotext_inf.so
-lib/libqmimotext.so
-lib64/libadropbox.so
 -vendor/lib/libtime_genoff.so
 vendor/lib/libimscamera_jni.so
 vendor/lib/libimsmedia_jni.so
@@ -494,23 +317,11 @@ vendor/lib/libril-qcril-hook-oem.so
 vendor/lib/libxml.so
 vendor/lib64/libqcmaputils.so
 
-# Touchscreen firmware
-etc/firmware/synaptics-s2726-15052160-1d19d9-clark.tdat
-etc/firmware/synaptics-s3528-15071401-1e29b4-clark.tdat
-etc/firmware/synaptics-s3528ar-15071401-1e29b4-clark.tdat
-bin/init.mmi.touch.sh
-
 # Sensors
-bin/motosh
-etc/firmware/sensorhubfw.bin
 lib/hw/sensors.msm8992.so
 vendor/lib/libsubsystem_control.so
-vendor/lib/libSubSystemShutdown.so
-lib64/hw/sensorhub.msm8992.so
 vendor/lib/libsensor1.so
+vendor/lib/libsensor_reg.so
 etc/sensors/sensor_def_qcomdev.conf
-
-# Wat - weird files
-vendor/lib/hw/flp.default.so
-bin/ssr_setup
-
+etc/sensors/sensor_fih_def_nbq_EVT1C_qcomdev.conf
+etc/sensors/sensor_fih_def_nbq_qcomdev.conf
