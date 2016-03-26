@@ -24,8 +24,6 @@ include $(LOCAL_PATH)/system_prop.mk
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config \
-    $(LOCAL_PATH)/configs/msm_irqbalance.conf:system/etc/msm_irqbalance.conf \
-    $(LOCAL_PATH)/overlay/frameworks/base/data/etc/platform.xml:system/etc/permissions/platform.xml \
     $(LOCAL_PATH)/configs/msm_irqbalance.conf:system/etc/msm_irqbalance.conf
 
 # Input device files for ether
