@@ -13,6 +13,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-add_lunch_combo cm_ether-user
-add_lunch_combo cm_ether-userdebug
-add_lunch_combo cm_ether-eng
+add_lunch_combo du_ether-userdebug
